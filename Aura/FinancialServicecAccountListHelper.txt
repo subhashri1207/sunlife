@@ -1,0 +1,9 @@
+({
+    Accounthelpermethod:function(component,event,helper){
+        var action = component.get("c.fetchAccountRecords");
+        action.setCallback(this,function(a){
+            component.set("v.ShowRecords",a.getReturnValue());
+        });
+        $A.enqueueAction(action);
+    }	
+})

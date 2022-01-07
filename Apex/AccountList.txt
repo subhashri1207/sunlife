@@ -1,0 +1,6 @@
+public class AccountList {
+ @AuraEnabled
+    public static list<Account> fetchAccountRecords(){
+      return [select Name,Owner.Name,Phone,Website,AnnualRevenue from Account where Industry='Financial Services'];        
+    }
+}
